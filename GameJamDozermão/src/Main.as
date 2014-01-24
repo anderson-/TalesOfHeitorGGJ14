@@ -1,28 +1,21 @@
-package 
+package
 {
-	import flash.display.Sprite;
-	import flash.events.Event;
+	import net.flashpunk.Engine;
+	import net.flashpunk.FP;
 	
-	/**
-	 * ...
-	 * @author Anderson Antunes
-	 */
-	public class Main extends Sprite 
+	public class Main extends Engine
 	{
-		
-		public function Main():void 
+		public function Main()
 		{
-			if (stage) init();
-			else addEventListener(Event.ADDED_TO_STAGE, init);
+			super(800, 600, 60, false);
+			FP.world = new MyWorld;
+			
 		}
-		
-		private function init(e:Event = null):void 
+
+		override public function init():void
 		{
-			removeEventListener(Event.ADDED_TO_STAGE, init);
-			// entry point
-			//qualquer coisa ae
+			trace("FlashPunk has started successfully!");
+			
 		}
-		
 	}
-	
 }

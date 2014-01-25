@@ -7,8 +7,9 @@ package
 	{
 		public function Main()
 		{
-			super(800, 600, 60, false);
+			super(800, 600, 30, false);
 			FP.world = new MyWorld;
+			FP.console.enable();
 			
 		}
 

@@ -21,6 +21,9 @@ package
 		// teste com o mouse
 		override public function update():void
 		{
+			
+			trace("asdasd");
+			
 			if (collide("bullet", x, y))
 			{
 				// Player is colliding with a "bullet" type.

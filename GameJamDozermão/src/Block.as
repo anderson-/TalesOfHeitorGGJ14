@@ -1,32 +1,55 @@
-package  
+package
 {
 	import net.flashpunk.Entity;
-	import net.flashpunk.graphics.Image
+	import net.flashpunk.graphics.Image;
+	import net.flashpunk.graphics.Spritemap;
+	
 	/**
 	 * ...
 	 * @author Anderson Antunes
 	 */
 	public class Block extends Entity
 	{
+		[Embed(source='assets/dirty.png')]
+		private const DIRTY_IMG:Class;
+		[Embed(source='assets/grass.png')]
+		private const GRASS_IMG:Class;
+		[Embed(source='assets/cave.png')]
+		private const CAVE_IMG:Class;
 		
-		[Embed(source = 'assets/stone_tile.gif')] private const PLAYER:Class;
-		
-		public function Block(x:uint,y:uint)
+		public function Block(x:int, y:int, type:String)
 		{
-			graphic = new Image(PLAYER);
-			setHitbox(32, 32);
-			type = "block";
 			this.x = x;
 			this.y = y;
+			
+			layer = 3;
+			
+			var sprites:Spritemap;
+			
+			if (type == "dirty")
+			{
+				sprites = new Spritemap(DIRTY_IMG, 50, 50);
+				sprites.randFrame();
+				this.type = "block";
+			}
+			else if (type == "grass")
+			{
+				sprites = new Spritemap(GRASS_IMG, 50, 50);
+				sprites.add("grass", [0, 1], 1, true);
+				sprites.play("grass",false,Math.random()*10);
+				this.type = "air";
+			}
+			else if (type == "cave")
+			{
+				sprites = new Spritemap(CAVE_IMG, 50, 50);
+				sprites.randFrame();
+				this.type = "air";
+			}
+			
+			graphic = sprites;
+			setHitbox(50, 50);
 		}
-		/*
-		public function Block(x:uint, y:uint)
-		{
-			this();
-			this.x = x;
-			this.y = y;
-		}*/
-		
+	
 	}
 
 }

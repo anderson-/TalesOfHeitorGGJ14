@@ -7,10 +7,9 @@ package
 	{
 		public function Main()
 		{
-			super(800, 600, 30, false);
-			FP.world = new MyWorld;
-			FP.console.enable();
+			super(1024, 768, 60, false);
 			
+			FP.world = new Menu;
 		}
 
 		override public function init():void

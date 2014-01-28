@@ -10,6 +10,7 @@ package
 			super(1024, 768, 60, false);
 			
 			FP.world = new Menu;
+			FP.console.enable();
 		}
 
 		override public function init():void

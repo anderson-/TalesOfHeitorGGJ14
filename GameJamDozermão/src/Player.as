@@ -31,7 +31,7 @@ package
 		public var dmg2: Sfx = new Sfx(DMG2);
 		
 
-		[Embed(source = 'assets/sounds/som1.mp3')]
+		[Embed(source = 'assets/sounds/narrador/som1.mp3')]
 		private const SOM1:Class;
 		public var som1: Sfx = new Sfx(SOM1,fimFala);
 		
@@ -53,7 +53,7 @@ package
 		
 		[Embed(source = 'assets/sounds/narrador/som6.mp3')]
 		private const SOM6:Class;
-		public var som6: Sfx = new Sfx(SOM5);
+		public var som6: Sfx = new Sfx(SOM6,fimFala);
 		
 		private const v:Array = [som1, som2, som3, som4, som5,som6];
 		
@@ -174,7 +174,8 @@ package
 			{
 				shoot.play(0.1);
 				var i: int = Math.random() * 5.9;
-				if (falando == false)
+				var j: Number = Math.random() * 1;
+				if (falando == false && j > 0.6)
 				{
 					i = Math.random() * 5.99;
 					falando = true;

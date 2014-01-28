@@ -5,7 +5,7 @@ bb
 bb                                                                                                                                                     
 bb                                                                                                                                                     
 bbb                                                                                                                                                   
-bbbb                                                                                                                                        B          
+bbbb                      B                       B                            B                                 B                          B          
 bbbbb                                                                                                                                                  
 bbbbb                                                                                                                                                  
 ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc

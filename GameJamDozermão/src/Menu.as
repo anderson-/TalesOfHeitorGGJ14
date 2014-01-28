@@ -65,12 +65,11 @@ package
 				if (buttonPlay.collidePoint(buttonPlay.x, buttonPlay.y, mouseX, mouseY))
 				{
 					[Embed(source="fase1.txt",mimeType="application/octet-stream")] var myText:Class;
-					
 					FP.world = new WorldCockroach();
 					
 					//Comente 2 linhas acima e descomente abaixo para jogar faze boss direto
 					//[Embed(source="fase6.txt",mimeType="application/octet-stream")] var myText:Class;
-					//FP.world = new WorldSheep;
+					//FP.world = new WorldSheep();
 					
 				}
 				else if (buttonCredits.collidePoint(buttonCredits.x, buttonCredits.y, mouseX, mouseY))

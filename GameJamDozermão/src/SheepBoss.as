@@ -43,17 +43,19 @@ package
 			}
 
 			meteor.add("meteor", l, 24, true);
-			boss.add("boss", [0, 1], 24, true);
+			boss.add("boss", [0, 1], 12, true);
+			meteor.scale = 3;
 			
 
 			
 			
 			this.x = x;
 			this.y = y+25;
-			boss.play();
+			boss.play("boss");
 			
 			velocityX = -VEL;
-			meteor.play();
+			meteor.play("meteor");
+			meteor.centerOrigin();
 			
 			setHitbox(200, 200, 100, 100);
 			type = "boss";
@@ -77,8 +79,10 @@ package
 		override public function update():void
 		{
 			super.update();
-			if (vivo){
-				jump(15);
+			if (vivo) {
+				var jumpHeight: Number ;
+				jumpHeight = Math.random() * 15 + 15;
+				jump(jumpHeight);
 			}
 		}
 		

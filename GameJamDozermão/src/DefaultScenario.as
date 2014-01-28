@@ -200,21 +200,36 @@ package
 						var t:String;
 						if (i - 1 >= 0)
 						{
+							
 							if (ifEq(matriz[i - 1][j], AIR))
 							{
-								add(new Block(posX, posY - 50, "grass"));
+								if (FP.world is WorldCockroach)
+								{
+									add(new Block(posX, posY - 50, "grass"));
+								}
+								else if (FP.world is WorldSheep)
+								{
+									add(new Block(posX, posY - 50, "grama"));
+								}
 							}
 						}
 						
 						if (i + 1 < mapHeight)
 						{
-							if (ifEq(matriz[i + 1][j], AIR))
+							if (ifEq(matriz[i + 1][j], AIR) && (FP.world is WorldCockroach))
 							{
 								add(new Block(posX, posY + 50, "cave"));
 							}
 						}
 						
-						add(new Block(posX, posY, "dirty"));
+						if (FP.world is WorldCockroach)
+						{
+							add(new Block(posX, posY, "dirty"));
+						}
+						else if (FP.world is WorldSheep)
+						{
+							add(new Block(posX, posY, "solidGrass"));
+						}
 					}
 					else if (v == "x")
 					{

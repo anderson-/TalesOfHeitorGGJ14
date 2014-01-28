@@ -43,8 +43,9 @@ package
 		override public function update():void {
 			super.update();
 			
-			if (Math.random() < 0.02) {
+			if (Math.random() < 0.05) {
 				add(new Sheep(this.camera.x + 1124, 100));
+				add(new Sheep(this.camera.x + 50, 100));
 			}
 		}
 		

@@ -50,7 +50,7 @@ package
 			Image(Graphiclist(graphic).children[1]).centerOrigin();
 			Image(Graphiclist(graphic).children[1]).originY += 50;
 			
-			hJump = Math.random() * 10 + 10;
+			hJump = Math.random() * 60 + 10;
 		}
 		
 		override public function update():void

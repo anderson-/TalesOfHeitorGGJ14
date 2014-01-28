@@ -5,6 +5,7 @@ package
 	import net.flashpunk.graphics.Spritemap;
 	import net.flashpunk.graphics.Graphiclist;
 	import net.flashpunk.Sfx;
+	import net.flashpunk.FP;
 
 	/**
 	 * ...
@@ -33,6 +34,8 @@ package
 		private const VEL: int = 3;
 		protected var vivo:Boolean = true;
 		protected var v:Array = [];
+		protected var timeDead:Number = 0;
+		private const DISAPPEARING_TIME: Number = 3;
 		
 		public function Cockroach(x:int = -1 ,y:int = -1)
 		{
@@ -92,6 +95,15 @@ package
 			{
 				x += velocityX;
 		
+			}else
+			{
+				timeDead += FP.elapsed;
+				sprite.alpha = 1 - timeDead / DISAPPEARING_TIME;
+				sprite.tinting = 0.5;
+				if (timeDead > DISAPPEARING_TIME)
+				{
+					this.destroy();
+				}
 			}
 		}
 		

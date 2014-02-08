@@ -291,8 +291,9 @@ package
 			{
 				if (Input.check(Key.A) )
 				{
-					if(left > FP.camera.x)
+					if(left > FP.camera.x){
 						moveBy( -5, 0, "block");
+					}
 					legsSprite.play("run");
 					if (groundSpriteAvailable == true && noChao == true)
 					{
@@ -316,7 +317,7 @@ package
 					
 				}
 				
-				if (Input.pressed(Key.W))
+				if (Input.pressed(Key.W) || Input.pressed(Key.SPACE))
 				{
 					jump();
 				} 

@@ -3,11 +3,11 @@ bb
 bb                                                                                                                                                     
 bb                                                                                                                                                     
 bb                                                                                                                                                     
-bb                                                                                                                                                     
-bbb                                                                                                                                                   
-bbbb                      B                       B                            B                                 B                          B          
-bbbbb                                                                                                                                                  
-bbbbb                                                                                                                                                  
+bb                bbbbbbbbbbbbbb                           b                                                                                           
+bbb                               c                        b                           bbbbbbbbbbbbbbbbb                                               
+bbbb                      B      ccc              B       bb         bbbb      B                                 B                          B          
+bbbbb                           ccccc                    bbb        bbbbbb                                                                             
+bbbbb          bbbb            ccccccc               bbbbbbb  bbbbb bbbbbbbbb                                                                          
 ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc 

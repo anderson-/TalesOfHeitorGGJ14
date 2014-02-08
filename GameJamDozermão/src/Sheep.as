@@ -13,7 +13,11 @@ package
 	
 	public class Sheep extends Cockroach
 	{
-		[Embed(source = 'assets/whiteSheep.png')] private const ENEMY:Class;
+
+			[Embed(source = 'assets/whiteSheep.png')] private const ENEMY1:Class;
+			[Embed(source = 'assets/blackSheep.png')] private const ENEMY2:Class;
+		
+		
 		
 		
 		private const VEL: int = 3;
@@ -21,8 +25,16 @@ package
 		public function Sheep(x:int,y:int)
 		{
 			super();
+			var rand: Number = Math.random();
+			if (rand > 0.25)
+			{
+				sprite = new Spritemap(ENEMY1, 50, 50);
+			}
+			else
+			{
+				sprite = new Spritemap(ENEMY2, 50, 50);
+			}
 			
-			sprite = new Spritemap(ENEMY, 50, 50);
 			
 			this.x = x;
 			this.y = y+25;
@@ -50,12 +62,13 @@ package
 			Image(Graphiclist(graphic).children[1]).centerOrigin();
 			Image(Graphiclist(graphic).children[1]).originY += 50;
 			
-			hJump = Math.random() * 60 + 10;
+			
 		}
 		
 		override public function update():void
 		{
 			super.update();
+			hJump = Math.random() * 60 + 10;
 			if (vivo){
 				jump(hJump);
 			}
